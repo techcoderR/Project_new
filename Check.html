@@ -1,0 +1,898 @@
+<!-- IUOV Dashboard Design with Components -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IUVO Connect</title>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet">
+    <link rel="stylesheet" href="check.css">
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header class="navbar navbar-light bg-white sticky-top flex-md-nowrap p-0
+      shadow w-100">
+      <a class="navbar-brand col-md-3 col-lg-2 text-center bg-light fs-3 py-0
+        me-0 col-12"
+        href="#"><i class="fa fa-globe text-danger
+          "></i> <strong>IUVO </strong>
+        <p class="fs-6 col-md-3 col-lg-2 text-center px-3 w-100"> Connecting
+          Platform</p>
+      </a>
+      <div class="position-relative w-100">
+        <form class="col-8 mt-2 col-lg-5 mx-4 pe-4 d-flex ps-0 position-absolute
+          me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="🔎 Search..."
+            aria-label="Search">
+          <i class="bi bi-bell fs-3 ms-3 "></i>
+        </form>
+        <div class="dropdown navbar-nav ms-4 ps-4 mt-3 text-end">
+          <a href="#" class="d-block link-dark text-decoration-none
+            dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32"
+              height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">Order</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-nav mt-3">
+        <div class="nav-item text-nowrap">
+          <a class="nav-link px-3" href="#">Sign out</a>
+        </div>
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- Dashboard Start -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Side Bar Start -->
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white
+          sidebar collapse">
+          <div class="position-sticky pt-4 mt-4 sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <span data-feather="home" class="align-text-bottom"></span>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file" class="align-text-bottom"></span>
+                  Compliance
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                  Fleet Management
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users" class="align-text-bottom"></span>
+                  Driver
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+                  User Action
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers" class="align-text-bottom"></span>
+                  Accounts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers" class="align-text-bottom"></span>
+                  Fuel Management
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers" class="align-text-bottom"></span>
+                  Geofencing
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers" class="align-text-bottom"></span>
+                  Settings
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Sidebar End -->
+        <p class="col-md-9 col-lg-10 mb-0 ms-sm-auto bg-secondary text-white " >>>
+          &nbsp;Dispatch </p>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div class="nav-scroller mt-2 p-4 py-1 mb-2">
+            <nav class="nav d-flex justify-content-start ">
+              <a class="p-2 link-primary me-3 fw-bold text-decoration-none
+                position-relative fs-6 " href="#">
+                <span class="position-absolute start-100 translate-middle badge
+                  rounded-pill " style="top: 10px; background:#ad388c;">
+                  01
+                  <span class="visually-hidden">unread messages</span>
+                </span>Order</a>
+              <a class="p-2 link-secondary fw-bold text-decoration-none fs-6"
+                href="#"> Transcation </a>
+              <a class="p-2 link-secondary fw-bold text-decoration-none fs-6"
+                href="#"> Message </a>
+            </nav>
+          </div>
+          <button class="tablink" onclick="openPage('Home', this,
+            'white',event)" id="defaultOpen">Dashborad</button>
+          <button class="tablink" onclick="openPage('News', this, 'green'
+            ,'Quotes')">Quotes</button>
+          <button class="tablink" onclick="openPage('Contact', this,
+            'blue','Orders')">Orders</button>
+          <button class="tablink" onclick="openPage('About', this,
+            'orange','Trips')">Trips</button>
+          <div id="Home" class="tabcontent border-2 d-flex flex-row
+            justify-content-center gap-2 overflow-y-scroll">
+            <!-- Left Side Column -->
+            <div class="col-lg-5">
+              <button class="bg-light border border-1 text-primary fw-bold "
+                style="width:20% ;margin-left:10px !important ;padding: 2%;
+                font-weight: light;" id="defaultOpen"> Order</button>
+              <button class=" bg-light border border-1 text-primary fw-bold "
+                style="width:20%; margin-left:0px ;padding: 2%; font-weight:
+                light; box-shadow: none; border-bottom:0px !important ;">Trips</button>
+              <input type="text" class="bg-light border rounded border-1
+                border-secondary" style=" margin-left:0px ;padding: 2%;
+                font-weight: light;" placeholder="Search Order, Profit 🔍">
+              <div id="L-box" class=" leftbox pt-2 d-flex flex-row">
+                <div class="col-6 d-flex flex-column ">
+                  <div class="col-12 d-flex flex-row justify-content-around">
+                    <button class="d-flex flex-column justify-content-center
+                      bg-white border border-0">
+                      <span class="text-primary small">127</span>
+                      <span class="text-capitalize small">ALL</span>
+                    </button>
+                    <button class="d-flex flex-column justify-content-center
+                      bg-white border border-0">
+                      <span class="text-warning small">16</span>
+                      <span class="text-capitalize small">COMPLETE</span>
+                    </button>
+                    <button class="d-flex flex-column bg-white text-center
+                      border border-0">
+                      <span class="text-danger text-center small">04</span>
+                      <span class="text-capitalize small">ACTIVE</span>
+                    </button>
+                    <button class="d-flex flex-column bg-white text-center
+                      border border-0">
+                      <span class="text-success text-center text-center small">03</span>
+                      <span class="text-capitalize small">PENDING</span>
+                    </button>
+
+                  </div>
+                  <div class="list d-flex flex-column">
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; &nbsp; > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; &nbsp; <span
+                            class="text-white rounded-1 bg-danger small p-1">ACTIVE
+                          </span> > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; &nbsp; <span
+                            class="text-white rounded-1 bg-danger small p-1">ACTIVE
+                          </span> > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; <span
+                            class="text-white rounded-1 bg-danger small p-1">ACTIVE
+                          </span> &nbsp; > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; <span
+                            class="text-white rounded-1 bg-danger small p-1">ACTIVE
+                          </span> &nbsp; > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; &nbsp; > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; &nbsp; > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; <span
+                            class="text-white rounded-1 bg-danger small p-1">ACTIVE
+                          </span> &nbsp; > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; &nbsp; > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; <span
+                            class="text-white rounded-1 bg-secondary small p-1">PENDING
+                          </span> &nbsp; > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; <span
+                            class="text-white rounded-1 bg-secondary small p-1">PENDING
+                          </span> &nbsp; > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row ms-2 border border-2 p-2
+                      rounded-2">
+                      <img class=" me-2 mt-3"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                        alt="" width="40px" height="40px ">
+                      <div class="d-flex flex-column mt-2">
+                        <span> <b>Trip No: </b>121121212</span>
+                        <span><b>Probill</b> &nbsp;:02 &nbsp; &nbsp; <span
+                            class="text-white rounded-1 bg-success small p-1">DONE
+                          </span> &nbsp; > </span>
+                        <span><strong> From</strong> State/Province to
+                          State/Province</span>
+                      </div>
+                    </div>
+
+
+
+
+                  </div>
+                </div>
+                <div class="col-6 d-flex flex-column gap-2 ms-2">
+                  <div class="col-12 d-flex justify-content-center">
+                    <button class="d-flex flex-column justify-content-center
+                      border-0 bg-white">
+                      <span class="text-center fw-bold text-primary small">03</span>
+                      <span class="text-center fw-bold text-secondary small">PROBILE</span>
+                    </button>
+                  </div>
+                  <div class="col-11 d-flex flex-column">
+                    <div class="d-flex justify-content-between bg-primary
+                      text-white p-2 rounded-1">
+                      <span class="small"> PROBILE #AHBR5467TS </span>
+                      <span> Chats </span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">Order No:</span> <span class="small">
+                        <strong>#AHBR5467TS</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">Shippper</span> <span class="small">
+                        <strong>Shipper Name</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">CPnsignee</span> <span class="small">
+                        <strong>Consignee </strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">Pickup:</span> <span class="small">
+                        <strong>City/ Provinspn</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">Drop Off</span> <span class="small">
+                        <strong>City/ Provinspn</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">Start Date</span> <span class="small">
+                        <strong>02 nov 2022 03:30 43:PM</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">End Date</span> <span class="small">
+                        <strong>03 nov 2022 03:30 43:PM</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 d-flex flex-row
+                      justify-content-between ">
+                      <span class="small"> Trip Status</span>
+                      <span class="bg-success text-white py-1 border
+                        border-success rounded-2">DONE</span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="text-danger"> ⏲ Carrier Reply Histroy</span>
+                    </div>
+                  </div>
+                  <div class="col-11 mt-2 d-flex flex-column">
+                    <div class="d-flex justify-content-between bg-primary
+                      text-white p-2 rounded-1">
+                      <span class="small"> PROBILE #AHBR5467TS </span>
+                      <span> Chats </span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">Order No:</span> <span class="small">
+                        <strong>#AHBR5467TS</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">Shippper</span> <span class="small">
+                        <strong>Shipper Name</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">CPnsignee</span> <span class="small">
+                        <strong>Consignee </strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">Pickup:</span> <span class="small">
+                        <strong>City/ Provinspn</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">Drop Off</span> <span class="small">
+                        <strong>City/ Provinspn</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">Start Date</span> <span class="small">
+                        <strong>02 nov 2022 03:30 43:PM</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 ">
+                      <span class="small">End Date</span> <span class="small">
+                        <strong>03 nov 2022 03:30 43:PM</strong></span>
+                    </div>
+                    <div class="border border-2 p-1 d-flex flex-row
+                      justify-content-between ">
+                      <span class="small"> Trip Status</span>
+                      <span class="bg-success text-white py-1 border
+                        border-success rounded-2">DONE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Left Side column end -->
+            <!-- Right Side Columne Start -->
+            <div class="col-lg-7">
+              <!-- Right Uper Columne -->
+              <div class="col-12 border p-2 rounded-2 border-2 d-flex
+                justify-content-around flex-row gap-1">
+                <div class=" col-3 d-flex justify-content-center flex-column
+                  ms-4">
+                  <span class="text-primary">#AHBR5467TS </span>
+                  <span class="text-secondary">ORDER NO.</span>
+                </div>
+                <div class=" col-3 d-flex justify-content-center flex-column">
+                  <span class="text-primary">#AHBR5467TS </span>
+                  <span class="text-secondary">PROBILE NO.</span>
+                </div>
+                <div class=" col-3 d-flex justify-content-center flex-column">
+                  <span class="text-primary">#AHBR5467TS </span>
+                  <span class="text-secondary">TRIP NO.</span>
+                </div>
+                <div class=" d-flex justify-content-center flex-column">
+                  <button class="px-2 text-white" style="background-color:
+                    orangered; border: 2px outset orangered;">ACTIVE</button>
+                </div>
+              </div>
+              <!-- Roight Upper Column End -->
+              <!-- Right alert  -->
+              <div class="col-12">
+                <div class="col-12 bg-danger-subtle text-danger d-flex
+                  justify-content-between p-2 mt-2 border border-1 border-danger
+                  rounded-2">
+                  <span class="marked">⚠ Driver has Rejected .Please Reassign
+                    Trip</span>
+                  <span>Edit Trips ></span>
+                </div>
+              </div>
+              <!-- Right alert End -->
+              <!-- Right Lower Column -->
+              <div class="d-flex flex-row flex-wrap col-12 overflow-y-scroll
+                gap-5">
+                <div class="col-5">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-between py-4 px-2
+                      bg-white text-center border border-1 mt-2 rounded-1">
+                      <span class="fw-bold text-secondary small"> Probill Detail</span>
+                      <span class="text-danger fw-bold "> Edit Detail > </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Shipper Name</span>
+                      <span class="small"> Shipper </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Consignee</span>
+                      <span class="small"> Consignee </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Pickup
+                        Lcoation</span>
+                      <span class="alert alert-danger p-1 text-center small">
+                        New
+                        York, Ridgefield </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Drop Location
+                        Off
+                      </span>
+                      <span class=" alert alert-danger p-1 text-center small">
+                        Houston
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Type of Trips</span>
+                      <span class="small"> Long haul </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Pickup
+                        Location:
+                      </span>
+                      <span class="small"> +1877387498723 </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Delivery Order
+                        :</span>
+                      <span class="small"> #AHBR5467TS</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Trip Type</span>
+                      <span class="small"> Carrier </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Contact no</span>
+                      <span class=" small"> +1-00000000000</span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-between py-4 px-2
+                      bg-white text-center border border-1 mt-2 rounded-1">
+                      <span class="fw-bold text-secondary small"> Probill Live
+                        Status</span>
+                      <span class="text-danger fw-bold "> Connect Live Location
+                        > </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold small" style="color:lightsteelblue">
+                        Closed</span>
+                      <span style="width:20px ;height:20px; background-color:
+                        white; border:2px solid grey; border-radius: 50%; ">
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold small" style="color:lightsteelblue">
+                        Ready</span>
+                      <span style="width:20px ;height:20px; background-color:
+                        white; border:2px solid grey; border-radius: 50%; ">
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <span class="fw-bold small" style="color:lightsteelblue">
+                        Payment Received</span>
+
+                      <span style="width:20px ;height:20px; background-color:
+                        white; border:2px solid grey; border-radius: 50%; ">
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small "
+                        style="width:120px "> Invoice
+                      </span>
+                      <span class="alert alert-danger p-1 small"> By : John
+                        Carter</span>
+                      <span class="text-secondary small"> 02 OCT 2022 </span>
+                      <span style="width:20px ;height:20px; background-color:
+                        green; border:2px solid grey; border-radius: 50%; ">
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small "
+                        style="width:120px "> Ready to Invoice</span>
+                      <span class="alert alert-danger p-1 small"> By : John
+                        Carter</span>
+                      <span class="text-secondary small"> 02 OCT 2022 </span>
+                      <span style="width:20px ;height:20px; background-color:
+                        green; border:2px solid grey; border-radius: 50%; ">
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"
+                        style="width:120px "> Delivered
+                      </span>
+                      <span class="alert alert-danger p-1 small"> By : John
+                        Carter</span>
+                      <span class="text-secondary small"> 02 OCT 2022 </span>
+                      <span style="width:20px ;height:20px; background-color:
+                        green; border:2px solid grey; border-radius: 50%; ">
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"
+                        style="width:120px "> Drop off Location</span>
+                      <span class="alert alert-danger p-1 small"> By : John
+                        Carter</span>
+                      <span class="text-secondary small"> 02 OCT 2022 </span>
+                      <span style="width:20px ;height:20px; background-color:
+                        green; border:2px solid grey; border-radius: 50%; ">
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"
+                        style="width:120px "> Drop off En route </span>
+                      <span class="alert alert-danger p-1 small"> By : John
+                        Carter</span>
+                      <span class="text-secondary small"> 02 OCT 2022 </span>
+                      <span style="width:20px ;height:20px; background-color:
+                        green; border:2px solid grey; border-radius: 50%; ">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-between py-4 px-2
+                      bg-white text-center border border-1 mt-2 rounded-1">
+                      <span class="fw-bold text-secondary small"> Driver Details</span>
+                      <span class="text-danger fw-bold ">Driver Detail > </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white text-center border border-1 rounded-1">
+                      <div>
+                        <img
+                          src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"
+                          width="60px" height="60px " class="float-start"
+                          alt="user Img">
+                        <div class="d-flex flex-column text-start">
+                          <span class="fs-3"> John Carter </span>
+                          <span class="small"> 12 year Experience</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small "> Contact
+                      </span>
+                      <span class=" small"> +1-00000000000</span>
+
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small "> Current
+                        Location</span>
+                      <span class="alert alert-danger p-1 text-center small">
+                        Houston </span>
+
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Addres
+                      </span>
+
+                      <span class="small"> XYz Newor America</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Emergency
+                        Number</span>
+                      <span class="small"> +0100001010</span>
+
+                    </div>
+                    <div class="d-flex justify-content-between py-2 px-2
+                      bg-white border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small"> Working Hours</span>
+                      <span class="alert alert-danger p-1 small"> HOS ></span>
+                    </div>
+
+                    <div class="d-flex justify-content-between flex-column py-2
+                      px-2
+                      bg-white border border-1 rounded-1">
+                      <span class="fw-bold text-secondary small mb-2"> Upload
+                        Image</span>
+                      <div class="d-flex flex-row gap-1">
+
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                          alt="" width="40px" height="40px ">
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                          alt="" width="40px" height="40px ">
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                          alt="" width="40px" height="40px ">
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                          alt="" width="40px" height="40px ">
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                          alt="" width="40px" height="40px ">
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+                          alt="" width="40px" height="40px ">
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="d-flex justify-content-between py-4 px-2
+                    bg-white text-center border border-1 mt-2 rounded-1">
+                    <span class="fw-bold text-secondary small"> Cargo Detail</span>
+                  </div>
+                  <div class="d-flex justify-content-between flex-column py-2
+                    px-2
+                    bg-white border border-1 mt-2 rounded-1 text-start">
+                    <span class="fw-bold text-secondary small"> BOL / Reference
+                      No.</span>
+                    <span class="fw-bold text-black small"> #AHBR5467TS</span>
+                  </div>
+                  <div class="d-flex justify-content-between flex-column py-2
+                    px-2
+                    bg-white border border-1 mt-2 rounded-1 text-start">
+                    <span class="fw-bold text-secondary small"> Cargo
+                      Description</span>
+                    <span class="fw-bold text-black small"> 18 Shells</span>
+                  </div>
+                  <div class="d-flex justify-content-between py-2 px-2
+                    bg-white border border-1 mt-2 rounded-1">
+                    <div class="d-flex flex-column">
+                      <span class="text-secondary"> Quantity</span>
+                      <span class="text-black"> 4</span>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span class="text-secondary"> Unit</span>
+                      <span class="text-black"> 4</span>
+                    </div>
+
+                  </div>
+                  <div class="d-flex justify-content-between py-2 px-2
+                    bg-white border border-1 mt-2 rounded-1">
+                    <div class="d-flex flex-column">
+                      <span class="text-secondary"> Weight</span>
+                      <span class="text-black"> 1600kg</span>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span class="text-secondary">Package Type</span>
+                      <span class="text-black"> Package Type</span>
+                    </div>
+
+                  </div>
+                  <div class="d-flex justify-content-between py-2 px-2
+                    bg-white border border-1 mt-2 rounded-1">
+                    <div class="d-flex flex-column">
+                      <span class="text-secondary"> Rate</span>
+                      <span class="text-black"> 1600kg</span>
+                    </div>
+                    <div class="d-flex flex-column text-end">
+                      <span class="text-secondary"> Order Weight</span>
+                      <span class="text-black"> 1600 kg</span>
+                    </div>
+
+                  </div>
+                  <div class="d-flex justify-content-between py-2 px-2
+                    bg-white border border-1 mt-2 rounded-1">
+                    <div class="d-flex flex-column text-start">
+                      <span class="text-secondary"> Order Volume</span>
+                      <span class="text-black"> 1600kg</span>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span class="text-secondary"> Package Type</span>
+                      <span class="text-black"> Package Type</span>
+                    </div>
+
+                  </div>
+                  <div class="d-flex justify-content-between py-2 px-2
+                    bg-white border border-1 mt-2 rounded-1">
+                    <div class="d-flex flex-column">
+                      <span class="text-secondary"> Added Equiepment</span>
+                      <span class="text-black"> Equiepment Name</span>
+                    </div>
+                    <div class="d-flex flex-column text-end">
+                      <span class="text-secondary"> POD</span>
+                      <span class="text-black"> CLark Michek</span>
+                    </div>
+
+                  </div>
+                  <div class="d-flex justify-content-between py-2 px-2
+                    bg-white border border-1 mt-2 rounded-1">
+                    <div class="d-flex flex-column text-start">
+                      <span class="text-secondary"> Notes</span>
+                      <span class="text-black"> 1600kg</span>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span class="text-secondary"> POD Signed by</span>
+                      <span class="text-black"> Package Type</span>
+                    </div>
+
+                  </div>
+
+
+                </div>
+              </div>
+              <!-- Right Lower Column -->
+
+            </div>
+          </div>
+          <!-- Right SIde Column end -->
+
+          <div id="News" class="tabcontent">
+            <h3>News</h3>
+            <p>Some news this fine day!</p>
+          </div>
+
+          <div id="Contact" class="tabcontent">
+            <h3>Contact</h3>
+            <p>Get in touch, or swing by for a cup of coffee.</p>
+          </div>
+
+          <div id="About" class="tabcontent">
+            <h3>About</h3>
+            <p>Who we are and what we do.</p>
+          </div>
+        </main>
+      </div>
+    </div>
+    <!-- Dashboard End -->
+
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+    <script>
+                  function openPage(pageName, elmnt, color,event) {
+              // Hide all elements with class="tabcontent" by default */
+                          var i, tabcontent, tablinks;
+                          tabcontent = document.getElementsByClassName("tabcontent");
+                          for (i = 0; i < tabcontent.length; i++) {
+                            tabcontent[i].style.display = "none";
+                          }
+
+                          // Remove the background color of all tablinks/buttons
+                          tablinks = document.getElementsByClassName("tablink");
+                          for (i = 0; i < tablinks.length; i++) {
+                            tablinks[i].style.backgroundColor = "";
+                            
+                          }
+                          event.target.classList.add('active');
+                          // Show the specific tab content
+                          document.getElementById(pageName).style ="display:block;";
+                          
+                          
+                          // Add the specific color to the button used to open the tab content
+                          elmnt.style.backgroundColor = color;
+              }
+
+              // Get the element with id="defaultOpen" and click on it
+              document.getElementById("defaultOpen").click();
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"></script>
+
+  </body>
+</html>
